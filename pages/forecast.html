@@ -1,1 +1,17 @@
+<!-- http://openweathermap.org/forecast -->
 Forecast for {{ city }}
+
+<div ng-repeat="w in weatherResult.list">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ w.dt }}</h3>
+                </div> <!-- panel-heading -->
+                <div class="panel-body">
+                    Daytime temperature: {{ convertToFarenheit(w.temp.day) }}
+                </div> <!-- panel-body -->
+            </div> <!-- panel -->
+        </div>
+    </div>
+</div>
