@@ -6,7 +6,8 @@ Forecast for {{ city }}
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">{{ w.dt }}</h3>
+                    <!-- angular filter lets you format the date in the template -->
+                    <h3 class="panel-title">{{ convertToDate(w.dt) | date: 'MMM d, y' }}</h3>
                 </div> <!-- panel-heading -->
                 <div class="panel-body">
                     Daytime temperature: {{ convertToFarenheit(w.temp.day) }}
