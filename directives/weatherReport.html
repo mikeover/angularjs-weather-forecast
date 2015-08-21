@@ -1,0 +1,9 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <!-- angular filter lets you format the date in the template -->
+        <h3 class="panel-title">{{ convertToDate({ dt: weatherDay.dt }) | date: dateFormat }}</h3>
+    </div> <!-- panel-heading -->
+    <div class="panel-body">
+        Daytime temperature: {{ convertToStandard({ daytimeTemp: weatherDay.temp.day }) }}
+    </div> <!-- panel-body -->
+</div> 
